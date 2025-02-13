@@ -1,7 +1,12 @@
+import { perInfo, perStatement } from "./components/utils";
+
 export default function Home() {
   return (
-    <section>
-      <p>{"Hello world! 👋. I'm Patrick. Welcome to my personal website."}</p>
+    <section className="flex flex-col">
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+        {`Hello world! 👋. I'm ${perInfo.name}`}
+      </h1>
+      <p className="mb-4">{perStatement.statement}</p>
     </section>
   );
 }
