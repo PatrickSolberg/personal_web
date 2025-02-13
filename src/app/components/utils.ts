@@ -10,3 +10,7 @@ export const perInfo = {
 export const perStatement = {
   statement: `I'm an aspiring software engineer with a passion for building scalable and performant applications. I'm excited to explore new technologies and contribute to the open-source community.`,
 };
+
+export const cvLink = {
+  "/cv": { name: "cv" },
+};
