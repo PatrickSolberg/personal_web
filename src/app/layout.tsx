@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import PageTransition from "./components/page-transitions"; // Import client component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +15,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
@@ -25,7 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
-          {children}
+          <PageTransition>{children}</PageTransition> {/* Wrap pages */}
           <Footer />
         </main>
       </body>
